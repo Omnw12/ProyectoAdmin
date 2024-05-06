@@ -1,0 +1,13 @@
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\ProyectoChat.exe.config
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\ProyectoChat.exe
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\ProyectoChat.pdb
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\MetroSet UI.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.csproj.AssemblyReference.cache
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Form1.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Properties.Resources.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.csproj.GenerateResource.cache
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.csproj.CoreCompileInputs.cache
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.csproj.CopyComplete
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.exe
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.pdb
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Chat.resources
