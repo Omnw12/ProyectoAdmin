@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chat));
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.metroSetButton5 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton4 = new MetroSet_UI.Controls.MetroSetButton();
@@ -40,7 +41,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.metroSetPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,16 @@
             this.metroSetPanel1.ThemeAuthor = "Narwin";
             this.metroSetPanel1.ThemeName = "MetroLite";
             this.metroSetPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroSetPanel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::ProyectoChat.Properties.Resources.Car_Grey_icon_icons_com_54905__1_;
+            this.button2.Location = new System.Drawing.Point(0, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 48);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -204,15 +214,6 @@
             this.lblhora.Size = new System.Drawing.Size(244, 44);
             this.lblhora.TabIndex = 6;
             this.lblhora.Text = "11:23:00 p.m";
-            // 
-            // button2
-            // 
-            this.button2.Image = global::ProyectoChat.Properties.Resources.Car_Grey_icon_icons_com_54905__1_;
-            this.button2.Location = new System.Drawing.Point(0, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 48);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Chat
             // 

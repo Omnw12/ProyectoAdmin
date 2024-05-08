@@ -101,5 +101,10 @@ namespace ProyectoChat
             lblhora.Text = DateTime.Now.ToLongTimeString();
             lblfecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CargarFormularioEnPanel(new Stock());
+        }
     }
 }

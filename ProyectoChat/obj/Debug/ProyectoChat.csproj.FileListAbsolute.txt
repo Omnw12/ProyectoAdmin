@@ -47,3 +47,4 @@ E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Numerics.Vectors.
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Ofertas.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Stock.resources
