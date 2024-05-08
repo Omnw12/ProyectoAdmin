@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
-            this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,64 +76,6 @@
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
             // 
-            // metroSetTextBox1
-            // 
-            this.metroSetTextBox1.AutoCompleteCustomSource = null;
-            this.metroSetTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox1.Image = null;
-            this.metroSetTextBox1.IsDerivedStyle = true;
-            this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(436, 207);
-            this.metroSetTextBox1.MaxLength = 32767;
-            this.metroSetTextBox1.Multiline = false;
-            this.metroSetTextBox1.Name = "metroSetTextBox1";
-            this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(293, 48);
-            this.metroSetTextBox1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox1.StyleManager = null;
-            this.metroSetTextBox1.TabIndex = 2;
-            this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.metroSetTextBox1.ThemeAuthor = "Narwin";
-            this.metroSetTextBox1.ThemeName = "MetroLite";
-            this.metroSetTextBox1.UseSystemPasswordChar = false;
-            this.metroSetTextBox1.WatermarkText = "";
-            // 
-            // metroSetTextBox2
-            // 
-            this.metroSetTextBox2.AutoCompleteCustomSource = null;
-            this.metroSetTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox2.Image = null;
-            this.metroSetTextBox2.IsDerivedStyle = true;
-            this.metroSetTextBox2.Lines = null;
-            this.metroSetTextBox2.Location = new System.Drawing.Point(436, 302);
-            this.metroSetTextBox2.MaxLength = 32767;
-            this.metroSetTextBox2.Multiline = false;
-            this.metroSetTextBox2.Name = "metroSetTextBox2";
-            this.metroSetTextBox2.ReadOnly = false;
-            this.metroSetTextBox2.Size = new System.Drawing.Size(293, 48);
-            this.metroSetTextBox2.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox2.StyleManager = null;
-            this.metroSetTextBox2.TabIndex = 3;
-            this.metroSetTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox2.ThemeAuthor = "Narwin";
-            this.metroSetTextBox2.ThemeName = "MetroLite";
-            this.metroSetTextBox2.UseSystemPasswordChar = false;
-            this.metroSetTextBox2.WatermarkText = "";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -153,16 +96,43 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(436, 218);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 31);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.textBox2.Location = new System.Drawing.Point(436, 313);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(206, 31);
+            this.textBox2.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::ProyectoChat.Properties.Resources.hide;
+            this.button1.Location = new System.Drawing.Point(639, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 31);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroSetTextBox2);
-            this.Controls.Add(this.metroSetTextBox1);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -177,10 +147,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
-        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
-        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
