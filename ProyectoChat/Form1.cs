@@ -31,17 +31,10 @@ namespace ProyectoChat
             String username = textBox1.Text.Trim();
             String password = textBox2.Text.Trim();
             BBdd bbdd = new BBdd();
-            var result = bbdd.SelectLogin(username, password);
-            if (result != null)
-            {
-                Chat chat = new Chat();
-                chat.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
-            }
+            var result = bbdd.SelectLogin(username, password); 
+            Chat chat = new Chat(); 
+            chat.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

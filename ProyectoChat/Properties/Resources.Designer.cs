@@ -63,6 +63,16 @@ namespace ProyectoChat.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cooperation_greeting_partnership_deal_agreement_handshake_icon_262591__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cooperation_greeting_partnership_deal_agreement_handshake_icon_262591 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hide {
             get {
                 object obj = ResourceManager.GetObject("hide", resourceCulture);
