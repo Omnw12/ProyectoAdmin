@@ -28,19 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_offer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_concesionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_offer,
+            this.id_concesionario,
+            this.id_modelo,
+            this.description,
+            this.fotos});
+            this.dataGridView1.Location = new System.Drawing.Point(13, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(304, 429);
+            this.dataGridView1.TabIndex = 286;
+            // 
+            // id_offer
+            // 
+            this.id_offer.HeaderText = "Id de la Oferta";
+            this.id_offer.Name = "id_offer";
+            this.id_offer.ReadOnly = true;
+            // 
+            // id_concesionario
+            // 
+            this.id_concesionario.HeaderText = "Id del Concesionario";
+            this.id_concesionario.Name = "id_concesionario";
+            this.id_concesionario.ReadOnly = true;
+            // 
+            // id_modelo
+            // 
+            this.id_modelo.HeaderText = "Id del Modelo";
+            this.id_modelo.Name = "id_modelo";
+            this.id_modelo.ReadOnly = true;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Descripción";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            // 
+            // fotos
+            // 
+            this.fotos.HeaderText = "Fotos";
+            this.fotos.Name = "fotos";
+            this.fotos.ReadOnly = true;
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 467);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "Stock";
             this.Text = "Stock";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_offer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_concesionario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fotos;
     }
 }
