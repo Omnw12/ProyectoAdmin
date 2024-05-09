@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoChat
+namespace ProyectoChat.Formularios
 {
-    public partial class Ofertas : Form
+    public partial class InfoPers : Form
     {
-        public Ofertas()
+        public InfoPers()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

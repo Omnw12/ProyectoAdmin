@@ -48,3 +48,5 @@ E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Runtime.CompilerS
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Ofertas.resources
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Stock.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.ChatUsuarios.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Formularios.InfoPers.resources

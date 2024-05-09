@@ -118,16 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chat_icon-icons.com_67748 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chat_icon-icons.com_67748 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_arrows_back_direction_left_navigation_right_icon_1232371" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_arrows_back_direction_left_navigation_right_icon_123237.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info_information_icon_142931 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info_information_icon_142931 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_arrows_back_direction_left_navigation_right_icon_123237" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_arrows_back_direction_left_navigation_right_icon_123237.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Car_Grey_icon-icons.com_54905 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Car_Grey_icon-icons.com_54905 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooperation_greeting_partnership_deal_agreement_handshake_icon_262591 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooperation_greeting_partnership_deal_agreement_handshake_icon_262591 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_back_left_icon_123734" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_back_left_icon_123734.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Car_Grey_icon-icons.com_54905 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car_Grey_icon-icons.com_54905 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_icon-icons.com_63325" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car_icon-icons.com_63325.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
