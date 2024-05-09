@@ -249,14 +249,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAOw3AADsNwEH5WQiAAAAtklE
-        QVRYR+3VQQqCQBSA4VkHYbQKjDpAm+oGeYHa6RHbRZ2jukNEN3DRrv4XjoziIqieEu+Hb+Fs5qnoOMuy
-        rDcaYYX+60q5Mfa4I5MFzWIc8MAZM6hV33wJtTqz+QkLqBVufsGmWJt82RQRKvWwhWwucsgQ1x+4QW50
-        iDLtAXYYoFL9FayLtabH+InGV+ALhzhiDvXCIeQzVP0SfJ0cQvVX7AsPo1QW2kiO4wStHMeWZf17zj0B
-        0P5YId/ynGcAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

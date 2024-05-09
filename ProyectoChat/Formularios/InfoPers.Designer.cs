@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoPers));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,8 +45,12 @@
             this.pictureBox1.Location = new System.Drawing.Point(420, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 81);
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblfecha
             // 
@@ -55,7 +62,7 @@
             this.lblfecha.Location = new System.Drawing.Point(610, 41);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(161, 21);
-            this.lblfecha.TabIndex = 11;
+            this.lblfecha.TabIndex = 290;
             this.lblfecha.Text = "8 de enero del 2024";
             // 
             // lblhora
@@ -67,7 +74,7 @@
             this.lblhora.Location = new System.Drawing.Point(685, 12);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(86, 16);
-            this.lblhora.TabIndex = 288;
+            this.lblhora.TabIndex = 289;
             this.lblhora.Text = "11:23:00 p.m";
             // 
             // button1
@@ -75,23 +82,52 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::ProyectoChat.Properties.Resources.arrow_arrows_back_direction_left_navigation_right_icon_1232371;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(28, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 41);
-            this.button1.TabIndex = 289;
+            this.button1.TabIndex = 291;
             this.button1.Text = "     Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // metroSetButton2
+            // 
+            this.metroSetButton2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton2.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.IsDerivedStyle = true;
+            this.metroSetButton2.Location = new System.Drawing.Point(837, 581);
+            this.metroSetButton2.Name = "metroSetButton2";
+            this.metroSetButton2.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton2.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton2.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.Size = new System.Drawing.Size(109, 24);
+            this.metroSetButton2.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetButton2.StyleManager = null;
+            this.metroSetButton2.TabIndex = 292;
+            this.metroSetButton2.Text = "Cerrar Sesión";
+            this.metroSetButton2.ThemeAuthor = "Narwin";
+            this.metroSetButton2.ThemeName = "MetroLite";
+            this.metroSetButton2.Click += new System.EventHandler(this.metroSetButton2_Click);
             // 
             // InfoPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.metroSetButton2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblhora);
             this.Controls.Add(this.lblfecha);
+            this.Controls.Add(this.lblhora);
             this.Controls.Add(this.pictureBox1);
             this.Name = "InfoPers";
             this.Text = "InfoPers";
@@ -104,8 +140,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Button button1;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoChat.Clases;
+using ProyectoChat.Formularios;
 
 namespace ProyectoChat
 {
@@ -78,6 +79,13 @@ namespace ProyectoChat
             Form1 inicio = new Form1();
             inicio.Show();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InfoPers inicio = new InfoPers();
+            inicio.Show();
         }
     }
 }
