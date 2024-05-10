@@ -198,6 +198,8 @@
     <Content Include="Icons\back.png" />
     <Content Include="Icons\hide.png" />
     <Content Include="Icons\show.png" />
+    <None Include="Resources\twocirclingarrows1_120592.png" />
+    <None Include="Resources\savedisk_121993.png" />
     <None Include="Resources\car_icon-icons.com_63325.png" />
     <None Include="Resources\info_information_icon_142931 %281%29.png" />
     <None Include="Resources\arrow_arrows_back_direction_left_navigation_right_icon_123237.png" />

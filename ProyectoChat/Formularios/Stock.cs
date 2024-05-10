@@ -48,7 +48,9 @@ namespace ProyectoChat
 
         private void metroSetButton1_Click(object sender, EventArgs e)
         {
+            UserSession.CurrentConc = null;
             UserSession.CurrentUser = null;
+            UserSession.CurrentStockVehiculos = null;
             this.Hide();
             Form1 inicio = new Form1();
             inicio.Show();

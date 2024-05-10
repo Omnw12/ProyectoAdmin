@@ -9,5 +9,7 @@ namespace ProyectoChat.Clases
     public static class UserSession
     {
         public static ClassAdmins CurrentUser { get; set; }
+        public static InfoConc CurrentConc { get; set; }
+        public static StockVehiculos CurrentStockVehiculos { get; set; }
     }
 }

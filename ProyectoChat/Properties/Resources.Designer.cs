@@ -163,9 +163,29 @@ namespace ProyectoChat.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap savedisk_121993 {
+            get {
+                object obj = ResourceManager.GetObject("savedisk_121993", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap show {
             get {
                 object obj = ResourceManager.GetObject("show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap twocirclingarrows1_120592 {
+            get {
+                object obj = ResourceManager.GetObject("twocirclingarrows1_120592", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

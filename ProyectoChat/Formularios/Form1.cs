@@ -68,7 +68,7 @@ namespace ProyectoChat
             lblhora.Text = DateTime.Now.ToLongTimeString();
             lblfecha.Text = DateTime.Now.ToLongDateString();
         }
-
+         
         private void lblfecha_Click(object sender, EventArgs e)
         {
 

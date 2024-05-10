@@ -13,7 +13,7 @@ namespace ProyectoChat
         string connectionString;
         string database = "proyecto";
         string table = "admin";
-        private string table2 = "concesionarios";
+        string table2 = "concesionarios";
         MySqlConnection connection;
         MySqlCommand command;
 
@@ -96,7 +96,7 @@ namespace ProyectoChat
                 using (connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT id_concesionario, nombre, direccion, id_provincia FROM " + database + "." + table2 +
+                    string query = "SELECT id_concesionario, nombre, direccion, id_provincia, telefono FROM " + database + "." + table2 +
                                    " WHERE id_concesionario = @id_concesionario";
                     using (command = new MySqlCommand(query, connection))
                     {
@@ -110,13 +110,48 @@ namespace ProyectoChat
                                     id_concesionario = Convert.ToInt32(reader["id_concesionario"]),
                                     nombre = reader["nombre"].ToString(),
                                     direccion = reader["direccion"].ToString(),
-                                    id_provincia = Convert.ToInt32(reader["id_provincia"])
+                                    id_provincia = Convert.ToInt32(reader["id_provincia"]),
+                                    telefono = reader["telefono"].ToString()
                                 };
                                 return info;
                             }
 
                         }
                     }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"MySQL Exception: {ex.Message}");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"General Exception: {ex.Message}");
+                return null;
+            }
+
+            return null;
+        }
+        public InfoConc ActualizarInfo(InfoConc conc)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE " + database + "." + table2 + " SET nombre = @nombre, direccion = @direccion, id_provincia = @id_provincia, telefono = @telefono WHERE id_concesionario = @id_concesionario";
+                    
+                            using (command = new MySqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@id_concesionario", conc.id_concesionario);
+                                command.Parameters.AddWithValue("@nombre", conc.nombre);
+                                command.Parameters.AddWithValue("@direccion", conc.direccion);
+                                command.Parameters.AddWithValue("@id_provincia", conc.id_provincia);
+                                command.Parameters.AddWithValue("@telefono", conc.telefono);
+                                command.ExecuteNonQuery();
+                            }
+                            connection.Close();
                 }
             }
             catch (MySqlException ex)
