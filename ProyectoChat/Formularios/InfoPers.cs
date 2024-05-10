@@ -26,7 +26,6 @@ namespace ProyectoChat.Formularios
             {
                 metroSetTextBox1.Text = UserSession.CurrentConc.nombre;
                 metroSetTextBox2.Text = UserSession.CurrentConc.direccion;
-                metroSetTextBox3.Text = UserSession.CurrentConc.id_provincia.ToString();
                 metroSetTextBox4.Text = UserSession.CurrentConc.telefono;
             }
             else
@@ -52,6 +51,8 @@ namespace ProyectoChat.Formularios
         private void metroSetButton2_Click(object sender, EventArgs e)
         {
             UserSession.CurrentUser = null;
+            UserSession.CurrentConc = null;
+            UserSession.CurrentStockVehiculos = null;
             this.Hide();
             Form1 inicio = new Form1();
             inicio.Show();

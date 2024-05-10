@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoChat.Formularios;
 
 namespace ProyectoChat
 {
@@ -54,6 +55,32 @@ namespace ProyectoChat
             this.Hide();
             Form1 inicio = new Form1();
             inicio.Show();
+        }
+
+        private void metroSetButton2_Click(object sender, EventArgs e)
+        {
+            Modelos models = new Modelos();
+            this.Hide();
+            models.Show();
+        }
+
+        private void metroSetLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp",
+                Title = "Seleccionar imagen"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.Image = new System.Drawing.Bitmap(openFileDialog.FileName);
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Windows.Forms;
 using MySqlConnector;
 using ProyectoChat.Clases;
 
@@ -14,6 +16,8 @@ namespace ProyectoChat
         string database = "proyecto";
         string table = "admin";
         string table2 = "concesionarios";
+        string table3 = "offers";
+        string table4 = "vista_modelos";
         MySqlConnection connection;
         MySqlCommand command;
 
@@ -174,7 +178,7 @@ namespace ProyectoChat
                 using (connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT id_offer, id_concesionario, id_modelo, description, fotos, stock FROM " + database + "." + table2 +
+                    string query = "SELECT id_offer, id_concesionario, id_modelo, description, fotos, stock FROM " + database + "." + table3 +
                                    " WHERE id_concesionario = @id_concesionario";
                     using (command = new MySqlCommand(query, connection))
                     {
@@ -211,6 +215,70 @@ namespace ProyectoChat
             }
 
             return null;
+        }
+        public void MostrarModelsFull(DataGridView dg)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM " + database + "." + table4;
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex) { }
+        }
+        public void BuscarModelo(DataGridView dg, string modelo = "")
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+
+                    string query = "SELECT * FROM " + database + "." + table4 + " WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(modelo))
+                    {
+                        query += " AND modelo LIKE @modelo";
+                    }
+
+
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        // Asignar valores a los parámetros si se proporcionaron
+                        if (!string.IsNullOrEmpty(modelo))
+                        {
+                            cmd.Parameters.AddWithValue("@modelo", "%" + modelo + "%");
+                        }
+
+
+
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción según tus necesidades
+            }
         }
 
 

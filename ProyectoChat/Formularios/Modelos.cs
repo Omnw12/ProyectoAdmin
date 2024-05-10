@@ -9,18 +9,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoChat
+namespace ProyectoChat.Formularios
 {
-    public partial class ChatUsuarios : Form
+    public partial class Modelos : Form
     {
-        private Image backIcon = Image.FromFile("E:\\M7\\UF1-Practica4\\ProyectoChat\\ProyectoChat\\Icons\\back.png");
-        public ChatUsuarios()
+        public Modelos()
         {
             InitializeComponent();
             lblhora.Text = DateTime.Now.ToLongTimeString();
             lblfecha.Text = DateTime.Now.ToLongDateString();
-            timer1.Start();
-            var user = UserSession.CurrentUser;
+            BBdd bbdd = new BBdd();
+            bbdd.MostrarModelsFull(dataGridView1);
+        }
+
+        private void lblhora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Stock stock = new Stock();
+            this.Hide();
+            stock.Show();
+        }
+
+        private void metroSetButton2_Click(object sender, EventArgs e)
+        {
+            UserSession.CurrentUser = null;
+            UserSession.CurrentConc = null;
+            UserSession.CurrentStockVehiculos = null;
+            this.Hide();
+            Form1 inicio = new Form1();
+            inicio.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -29,31 +50,10 @@ namespace ProyectoChat
             lblfecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void ChatUsuarios_Load(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Chat inicio = new Chat();
-            inicio.Show();
-        }
-
-        private void lblhora_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetButton1_Click(object sender, EventArgs e)
-        {
-            UserSession.CurrentUser = null;
-            UserSession.CurrentConc = null;
-            UserSession.CurrentStockVehiculos = null;
-            this.Hide();
-            Form1 inicio = new Form1();
-            inicio.Show();
+            BBdd bbdd = new BBdd();
+            bbdd.BuscarModelo(dataGridView1, metroSetTextBox1.Text);
         }
     }
 }

@@ -50,3 +50,4 @@ E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Ofertas.res
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Stock.resources
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.ChatUsuarios.resources
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Formularios.InfoPers.resources
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.Formularios.Modelos.resources

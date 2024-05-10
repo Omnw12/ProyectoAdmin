@@ -137,6 +137,12 @@
     <Compile Include="Formularios\InfoPers.Designer.cs">
       <DependentUpon>InfoPers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Modelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelos.Designer.cs">
+      <DependentUpon>Modelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ofertas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InfoPers.resx">
       <DependentUpon>InfoPers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelos.resx">
+      <DependentUpon>Modelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ofertas.resx">
       <DependentUpon>Ofertas.cs</DependentUpon>
@@ -198,6 +207,8 @@
     <Content Include="Icons\back.png" />
     <Content Include="Icons\hide.png" />
     <Content Include="Icons\show.png" />
+    <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.png" />
+    <None Include="Resources\add_circle_create_expand_new_plus_icon_123218.png" />
     <None Include="Resources\twocirclingarrows1_120592.png" />
     <None Include="Resources\savedisk_121993.png" />
     <None Include="Resources\car_icon-icons.com_63325.png" />

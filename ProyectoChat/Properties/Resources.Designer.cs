@@ -63,6 +63,16 @@ namespace ProyectoChat.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_circle_create_expand_new_plus_icon_123218 {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_create_expand_new_plus_icon_123218", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_arrows_back_direction_left_navigation_right_icon_123237 {
             get {
                 object obj = ResourceManager.GetObject("arrow_arrows_back_direction_left_navigation_right_icon_123237", resourceCulture);
@@ -166,6 +176,16 @@ namespace ProyectoChat.Properties {
         internal static System.Drawing.Bitmap savedisk_121993 {
             get {
                 object obj = ResourceManager.GetObject("savedisk_121993", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
