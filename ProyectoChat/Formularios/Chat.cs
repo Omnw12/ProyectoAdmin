@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +23,7 @@ namespace ProyectoChat
             lblfecha.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
             var user = UserSession.CurrentUser;
+            LoadImageFromUrl(user.photo);
         }
      
         private void metroSetPanel1_Paint(object sender, PaintEventArgs e)
@@ -89,9 +92,34 @@ namespace ProyectoChat
             InfoPers inicio = new InfoPers();
             inicio.Show();
         }
+        private void LoadImageFromUrl(string imageUrl)
+        {
+            try
+            {
+                using (WebClient webClient = new WebClient())
+                {
+                    byte[] data = webClient.DownloadData(imageUrl);
+                    using (MemoryStream stream = new MemoryStream(data))
+                    {
+                        pictureBox2.Image = Image.FromStream(stream);
+                    }
+                }
+            }
+            catch (WebException webEx)
+            {
+                // Esto capturará errores específicos de la red
+                MessageBox.Show("Error al cargar la imagen desde la web: " + webEx.Message);
+            }
+            catch (Exception ex)
+            {
+                // Esto capturará cualquier otro tipo de error
+                MessageBox.Show("Error general: " + ex.Message);
+            }
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp",
