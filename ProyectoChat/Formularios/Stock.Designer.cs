@@ -35,29 +35,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_offer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel4 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
-            this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.metroSetPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -127,12 +123,6 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_offer,
-            this.id_modelo,
-            this.description,
-            this.fotos,
-            this.Cantidad});
             this.dataGridView1.Location = new System.Drawing.Point(331, 99);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -143,36 +133,6 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(504, 429);
             this.dataGridView1.TabIndex = 286;
-            // 
-            // id_offer
-            // 
-            this.id_offer.HeaderText = "Id de la Oferta";
-            this.id_offer.Name = "id_offer";
-            this.id_offer.ReadOnly = true;
-            // 
-            // id_modelo
-            // 
-            this.id_modelo.HeaderText = "Id del Modelo";
-            this.id_modelo.Name = "id_modelo";
-            this.id_modelo.ReadOnly = true;
-            // 
-            // description
-            // 
-            this.description.HeaderText = "Descripción";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
-            // 
-            // fotos
-            // 
-            this.fotos.HeaderText = "Fotos";
-            this.fotos.Name = "fotos";
-            this.fotos.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Stock";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
             // 
             // metroSetButton2
             // 
@@ -196,7 +156,7 @@
             this.metroSetButton2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetButton2.StyleManager = null;
             this.metroSetButton2.TabIndex = 295;
-            this.metroSetButton2.Text = "Consultar Modelos";
+            this.metroSetButton2.Text = "Consultar Coches";
             this.metroSetButton2.ThemeAuthor = "Narwin";
             this.metroSetButton2.ThemeName = "MetroLite";
             this.metroSetButton2.Click += new System.EventHandler(this.metroSetButton2_Click);
@@ -266,6 +226,118 @@
             this.metroSetPanel1.ThemeAuthor = "Narwin";
             this.metroSetPanel1.ThemeName = "MetroLite";
             // 
+            // metroSetTextBox2
+            // 
+            this.metroSetTextBox2.AutoCompleteCustomSource = null;
+            this.metroSetTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox2.Image = null;
+            this.metroSetTextBox2.IsDerivedStyle = true;
+            this.metroSetTextBox2.Lines = null;
+            this.metroSetTextBox2.Location = new System.Drawing.Point(113, 219);
+            this.metroSetTextBox2.MaxLength = 32767;
+            this.metroSetTextBox2.Multiline = false;
+            this.metroSetTextBox2.Name = "metroSetTextBox2";
+            this.metroSetTextBox2.ReadOnly = false;
+            this.metroSetTextBox2.Size = new System.Drawing.Size(138, 27);
+            this.metroSetTextBox2.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTextBox2.StyleManager = null;
+            this.metroSetTextBox2.TabIndex = 311;
+            this.metroSetTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroSetTextBox2.ThemeAuthor = "Narwin";
+            this.metroSetTextBox2.ThemeName = "MetroLite";
+            this.metroSetTextBox2.UseSystemPasswordChar = false;
+            this.metroSetTextBox2.WatermarkText = "";
+            // 
+            // metroSetTextBox1
+            // 
+            this.metroSetTextBox1.AutoCompleteCustomSource = null;
+            this.metroSetTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox1.Image = null;
+            this.metroSetTextBox1.IsDerivedStyle = true;
+            this.metroSetTextBox1.Lines = null;
+            this.metroSetTextBox1.Location = new System.Drawing.Point(113, 76);
+            this.metroSetTextBox1.MaxLength = 32767;
+            this.metroSetTextBox1.Multiline = false;
+            this.metroSetTextBox1.Name = "metroSetTextBox1";
+            this.metroSetTextBox1.ReadOnly = false;
+            this.metroSetTextBox1.Size = new System.Drawing.Size(138, 27);
+            this.metroSetTextBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTextBox1.StyleManager = null;
+            this.metroSetTextBox1.TabIndex = 310;
+            this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroSetTextBox1.ThemeAuthor = "Narwin";
+            this.metroSetTextBox1.ThemeName = "MetroLite";
+            this.metroSetTextBox1.UseSystemPasswordChar = false;
+            this.metroSetTextBox1.WatermarkText = "";
+            // 
+            // metroSetTextBox4
+            // 
+            this.metroSetTextBox4.AutoCompleteCustomSource = null;
+            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetTextBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox4.Image = null;
+            this.metroSetTextBox4.IsDerivedStyle = true;
+            this.metroSetTextBox4.Lines = null;
+            this.metroSetTextBox4.Location = new System.Drawing.Point(116, 16);
+            this.metroSetTextBox4.MaxLength = 32767;
+            this.metroSetTextBox4.Multiline = false;
+            this.metroSetTextBox4.Name = "metroSetTextBox4";
+            this.metroSetTextBox4.ReadOnly = false;
+            this.metroSetTextBox4.Size = new System.Drawing.Size(138, 27);
+            this.metroSetTextBox4.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTextBox4.StyleManager = null;
+            this.metroSetTextBox4.TabIndex = 309;
+            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroSetTextBox4.ThemeAuthor = "Narwin";
+            this.metroSetTextBox4.ThemeName = "MetroLite";
+            this.metroSetTextBox4.UseSystemPasswordChar = false;
+            this.metroSetTextBox4.WatermarkText = "";
+            this.metroSetTextBox4.Click += new System.EventHandler(this.metroSetTextBox4_Click);
+            // 
+            // metroSetLabel5
+            // 
+            this.metroSetLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel5.IsDerivedStyle = true;
+            this.metroSetLabel5.Location = new System.Drawing.Point(3, 24);
+            this.metroSetLabel5.Name = "metroSetLabel5";
+            this.metroSetLabel5.Size = new System.Drawing.Size(107, 19);
+            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel5.StyleManager = null;
+            this.metroSetLabel5.TabIndex = 308;
+            this.metroSetLabel5.Text = "Id del Coche";
+            this.metroSetLabel5.ThemeAuthor = "Narwin";
+            this.metroSetLabel5.ThemeName = "MetroLite";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(113, 136);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(138, 50);
+            this.pictureBox2.TabIndex = 307;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // metroSetLabel3
             // 
             this.metroSetLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -309,107 +381,6 @@
             this.metroSetTextBox3.UseSystemPasswordChar = false;
             this.metroSetTextBox3.WatermarkText = "";
             // 
-            // metroSetTextBox4
-            // 
-            this.metroSetTextBox4.AutoCompleteCustomSource = null;
-            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox4.Image = null;
-            this.metroSetTextBox4.IsDerivedStyle = true;
-            this.metroSetTextBox4.Lines = null;
-            this.metroSetTextBox4.Location = new System.Drawing.Point(116, 16);
-            this.metroSetTextBox4.MaxLength = 32767;
-            this.metroSetTextBox4.Multiline = false;
-            this.metroSetTextBox4.Name = "metroSetTextBox4";
-            this.metroSetTextBox4.ReadOnly = false;
-            this.metroSetTextBox4.Size = new System.Drawing.Size(138, 27);
-            this.metroSetTextBox4.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox4.StyleManager = null;
-            this.metroSetTextBox4.TabIndex = 309;
-            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox4.ThemeAuthor = "Narwin";
-            this.metroSetTextBox4.ThemeName = "MetroLite";
-            this.metroSetTextBox4.UseSystemPasswordChar = false;
-            this.metroSetTextBox4.WatermarkText = "";
-            // 
-            // metroSetLabel5
-            // 
-            this.metroSetLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel5.IsDerivedStyle = true;
-            this.metroSetLabel5.Location = new System.Drawing.Point(3, 24);
-            this.metroSetLabel5.Name = "metroSetLabel5";
-            this.metroSetLabel5.Size = new System.Drawing.Size(107, 19);
-            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel5.StyleManager = null;
-            this.metroSetLabel5.TabIndex = 308;
-            this.metroSetLabel5.Text = "Modelo";
-            this.metroSetLabel5.ThemeAuthor = "Narwin";
-            this.metroSetLabel5.ThemeName = "MetroLite";
-            // 
-            // metroSetTextBox1
-            // 
-            this.metroSetTextBox1.AutoCompleteCustomSource = null;
-            this.metroSetTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox1.Image = null;
-            this.metroSetTextBox1.IsDerivedStyle = true;
-            this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(113, 76);
-            this.metroSetTextBox1.MaxLength = 32767;
-            this.metroSetTextBox1.Multiline = false;
-            this.metroSetTextBox1.Name = "metroSetTextBox1";
-            this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(138, 27);
-            this.metroSetTextBox1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox1.StyleManager = null;
-            this.metroSetTextBox1.TabIndex = 310;
-            this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox1.ThemeAuthor = "Narwin";
-            this.metroSetTextBox1.ThemeName = "MetroLite";
-            this.metroSetTextBox1.UseSystemPasswordChar = false;
-            this.metroSetTextBox1.WatermarkText = "";
-            // 
-            // metroSetTextBox2
-            // 
-            this.metroSetTextBox2.AutoCompleteCustomSource = null;
-            this.metroSetTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox2.Image = null;
-            this.metroSetTextBox2.IsDerivedStyle = true;
-            this.metroSetTextBox2.Lines = null;
-            this.metroSetTextBox2.Location = new System.Drawing.Point(113, 219);
-            this.metroSetTextBox2.MaxLength = 32767;
-            this.metroSetTextBox2.Multiline = false;
-            this.metroSetTextBox2.Name = "metroSetTextBox2";
-            this.metroSetTextBox2.ReadOnly = false;
-            this.metroSetTextBox2.Size = new System.Drawing.Size(138, 27);
-            this.metroSetTextBox2.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox2.StyleManager = null;
-            this.metroSetTextBox2.TabIndex = 311;
-            this.metroSetTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox2.ThemeAuthor = "Narwin";
-            this.metroSetTextBox2.ThemeName = "MetroLite";
-            this.metroSetTextBox2.UseSystemPasswordChar = false;
-            this.metroSetTextBox2.WatermarkText = "";
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -422,6 +393,7 @@
             this.button2.Text = "Agregar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -434,6 +406,7 @@
             this.button4.TabIndex = 314;
             this.button4.Text = "       Eliminar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -447,6 +420,7 @@
             this.button3.Text = "Actualizar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnBuscar
             // 
@@ -462,16 +436,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(36, 32);
             this.btnBuscar.TabIndex = 305;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(113, 136);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(138, 50);
-            this.pictureBox2.TabIndex = 307;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // button1
             // 
@@ -497,11 +462,26 @@
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
+            // metroSetLabel6
+            // 
+            this.metroSetLabel6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel6.IsDerivedStyle = true;
+            this.metroSetLabel6.Location = new System.Drawing.Point(331, 581);
+            this.metroSetLabel6.Name = "metroSetLabel6";
+            this.metroSetLabel6.Size = new System.Drawing.Size(318, 23);
+            this.metroSetLabel6.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel6.StyleManager = null;
+            this.metroSetLabel6.TabIndex = 315;
+            this.metroSetLabel6.Text = "Búsqueda por Id del Coche";
+            this.metroSetLabel6.ThemeAuthor = "Narwin";
+            this.metroSetLabel6.ThemeName = "MetroLite";
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.metroSetLabel6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.metroSetTextBox3);
@@ -535,11 +515,6 @@
         private System.Windows.Forms.Button button1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_offer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_modelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fotos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel4;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
@@ -556,5 +531,6 @@
         private System.Windows.Forms.Button button2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
     }
 }

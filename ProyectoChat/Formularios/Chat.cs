@@ -89,5 +89,19 @@ namespace ProyectoChat
             InfoPers inicio = new InfoPers();
             inicio.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp",
+                Title = "Seleccionar imagen"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.Image = new System.Drawing.Bitmap(openFileDialog.FileName);
+            }
+        }
     }
 }

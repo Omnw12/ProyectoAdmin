@@ -142,13 +142,14 @@
             this.metroSetLabel1.IsDerivedStyle = true;
             this.metroSetLabel1.Location = new System.Drawing.Point(13, 162);
             this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(318, 23);
+            this.metroSetLabel1.Size = new System.Drawing.Size(282, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel1.StyleManager = null;
             this.metroSetLabel1.TabIndex = 300;
             this.metroSetLabel1.Text = "Búsqueda por Nombre del Modelo";
             this.metroSetLabel1.ThemeAuthor = "Narwin";
             this.metroSetLabel1.ThemeName = "MetroLite";
+            this.metroSetLabel1.Click += new System.EventHandler(this.metroSetLabel1_Click);
             // 
             // btnBuscar
             // 
@@ -159,9 +160,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(752, 162);
+            this.btnBuscar.Location = new System.Drawing.Point(715, 158);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(36, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(47, 27);
             this.btnBuscar.TabIndex = 301;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -180,7 +181,7 @@
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.IsDerivedStyle = true;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(338, 158);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(301, 158);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
@@ -194,6 +195,7 @@
             this.metroSetTextBox1.ThemeName = "MetroLite";
             this.metroSetTextBox1.UseSystemPasswordChar = false;
             this.metroSetTextBox1.WatermarkText = "";
+            this.metroSetTextBox1.Click += new System.EventHandler(this.metroSetTextBox1_Click);
             // 
             // Modelos
             // 

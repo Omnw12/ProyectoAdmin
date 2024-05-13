@@ -18,6 +18,7 @@ namespace ProyectoChat
         string table2 = "concesionarios";
         string table3 = "offers";
         string table4 = "vista_modelos";
+        string table5 = "peticiones";
         MySqlConnection connection;
         MySqlCommand command;
 
@@ -171,50 +172,48 @@ namespace ProyectoChat
 
             return null;
         }
-        public StockVehiculos MostrarStock(int id_concesionario)
+        public void MostrarStock(DataGridView dg, String id_concesionario)
         {
             try
             {
                 using (connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT id_offer, id_concesionario, id_modelo, description, fotos, stock FROM " + database + "." + table3 +
-                                   " WHERE id_concesionario = @id_concesionario";
-                    using (command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@id_concesionario", id_concesionario);
-                        using (MySqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                StockVehiculos stock = new StockVehiculos()
-                                {
-                                    id_offer = Convert.ToInt32(reader["id_offer"]), 
-                                    id_concesionario = Convert.ToInt32(reader["id_concesionario"]),
-                                    id_modelo = Convert.ToInt32(reader["nombre"]),
-                                    description = reader["description"].ToString(),
-                                    fotos = reader["id_provincia"].ToString(),
-                                    stock = Convert.ToInt32(reader["stock"])
-                                };
-                                return stock;
-                            }
 
+
+                    string query = "SELECT * FROM " + database + "." + table3 + " WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(id_concesionario))
+                    {
+                        query += " AND id_concesionario LIKE @id_concesionario";
+                    }
+
+
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        // Asignar valores a los parámetros si se proporcionaron
+                        if (!string.IsNullOrEmpty(id_concesionario))
+                        {
+                            cmd.Parameters.AddWithValue("@id_concesionario", "%" + id_concesionario + "%");
+                        }
+
+
+
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
                         }
                     }
                 }
             }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine($"MySQL Exception: {ex.Message}");
-                return null;
-            }
             catch (Exception ex)
             {
-                Console.WriteLine($"General Exception: {ex.Message}");
-                return null;
+                // Manejar la excepción según tus necesidades
             }
 
-            return null;
         }
         public void MostrarModelsFull(DataGridView dg)
         {
@@ -224,6 +223,28 @@ namespace ProyectoChat
                 {
                     connection.Open();
                     string query = "SELECT * FROM " + database + "." + table4;
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex) { }
+        }
+        public void MostrarPeticiones(DataGridView dg)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM " + database + "." + table5;
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -280,7 +301,185 @@ namespace ProyectoChat
                 // Manejar la excepción según tus necesidades
             }
         }
+        public void BuscarCoche_id(DataGridView dg, string id_coche = "", string id_concesionario = "")
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
 
+
+                    string query = "SELECT * FROM " + database + "." + table3 + " WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(id_coche))
+                    {
+                        query += " AND id_coche LIKE @id_coche";
+                    }
+                    if (!string.IsNullOrEmpty(id_concesionario))
+                    {
+                        query += " AND id_concesionario LIKE @id_concesionario";
+                    }
+
+
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        // Asignar valores a los parámetros si se proporcionaron
+                        if (!string.IsNullOrEmpty(id_coche))
+                        {
+                            cmd.Parameters.AddWithValue("@id_coche", "%" + id_coche + "%");
+                        }
+                        if (!string.IsNullOrEmpty(id_concesionario))
+                        {
+                            cmd.Parameters.AddWithValue("@id_concesionario", "%" + id_concesionario + "%");
+                        }
+
+
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción según tus necesidades
+            }
+        }
+        public void BuscarCoche_id1(DataGridView dg, string id_coche = "")
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+
+                    string query = "SELECT * FROM " + database + "." + table5 + " WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(id_coche))
+                    {
+                        query += " AND id_coche LIKE @id_coche";
+                    }
+
+
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        // Asignar valores a los parámetros si se proporcionaron
+                        if (!string.IsNullOrEmpty(id_coche))
+                        {
+                            cmd.Parameters.AddWithValue("@id_coche", "%" + id_coche + "%");
+                        }
+
+
+
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            dg.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción según tus necesidades
+            }
+        }
+        public void InsertStock(StockVehiculos stock)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "Insert Into " + database + "." + table3 + "(id_concesionario, id_coche, description, stock) Values (@id_concesionario,@id_coche,@description,@stock)";
+                    using (command = new MySqlCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("@id_concesionario", stock.id_concesionario);
+                        command.Parameters.AddWithValue("@id_coche", stock.id_coche);
+                        command.Parameters.AddWithValue("@description", stock.description);
+                        command.Parameters.AddWithValue("@stock", stock.stock);
+                        command.ExecuteNonQuery();
+                    }
+                    connection.Close();
+
+                    MessageBox.Show("Registro añadido exitosamente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex.Message);
+                connection.Close();
+            }
+
+        }
+        public void modifyStock(StockVehiculos stock)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "UPDATE " + database + "." + table3 + " SET id_coche = @id_coche, description = @description, stock = @stock WHERE id_offer = @id_offer";
+                    using (command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id_offer", stock.id_offer);
+                        command.Parameters.AddWithValue("@id_coche", stock.id_coche);
+                        command.Parameters.AddWithValue("@description", stock.description);
+                        command.Parameters.AddWithValue("@stock", stock.stock);
+                        command.ExecuteNonQuery();
+                    }
+                    connection.Close();
+
+                    MessageBox.Show("Registro modificado exitosamente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex.Message);
+                connection.Close();
+            }
+
+        }
+        public void eliminarStock(int id_offer)
+        {
+            try
+            {
+                using (connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "DELETE FROM " + database + "." + table3 + " WHERE id_offer = @id_offer";
+
+                    using (command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id_offer", id_offer);
+                        command.ExecuteNonQuery();
+                    }
+
+                    connection.Close();
+
+                    MessageBox.Show("Registro eliminado exitosamente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+            }
+        }
 
     }
 

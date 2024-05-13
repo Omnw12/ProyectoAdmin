@@ -55,5 +55,15 @@ namespace ProyectoChat.Formularios
             BBdd bbdd = new BBdd();
             bbdd.BuscarModelo(dataGridView1, metroSetTextBox1.Text);
         }
+
+        private void metroSetTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroSetLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

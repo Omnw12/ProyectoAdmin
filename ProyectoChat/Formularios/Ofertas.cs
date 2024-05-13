@@ -1,4 +1,5 @@
-﻿using ProyectoChat.Clases;
+﻿using MetroSet_UI.Controls;
+using ProyectoChat.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,9 @@ namespace ProyectoChat
             lblfecha.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
             var user = UserSession.CurrentUser;
+            BBdd bbdd = new BBdd();
+            bbdd.MostrarPeticiones(dataGridView1);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,6 +60,17 @@ namespace ProyectoChat
             this.Hide();
             Form1 inicio = new Form1();
             inicio.Show();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BBdd bbdd = new BBdd();
+            bbdd.BuscarCoche_id1(dataGridView1, metroSetTextBox1.Text);
         }
     }
 }
