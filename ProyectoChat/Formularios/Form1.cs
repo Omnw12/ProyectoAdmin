@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoChat.Clases;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ProyectoChat
 {
@@ -30,14 +33,15 @@ namespace ProyectoChat
 
         }
 
-        private void metroSetButton1_Click(object sender, EventArgs e)
+        private async void metroSetButton1_ClickAsync(object sender, EventArgs e)
         {
             String username = textBox1.Text.Trim();
             String password = textBox2.Text.Trim();
             BBdd bbdd = new BBdd();
-            var result = bbdd.SelectLogin(username, password);
+            var result = await SelectLoginAsync(username, password);
             if (result != null)
             {
+                MessageBox.Show("Sesión iniciada.");
                 UserSession.CurrentUser = result;
                 Chat chat = new Chat();
                 chat.Show();
@@ -83,5 +87,31 @@ namespace ProyectoChat
         {
 
         }
+        public async Task<ClassAdmins> SelectLoginAsync(string username, string password)
+        {
+            var baseUrl = "http://20.90.95.76/selectLogin.php";
+            if (string.IsNullOrWhiteSpace(baseUrl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía.", nameof(baseUrl));
+            }
+
+            var client = new HttpClient();
+            var response = await client.PostAsync(baseUrl, new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("username", username),
+                new KeyValuePair<string, string>("password", password)
+            }));
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<ClassAdmins>(jsonResponse);
+            }
+            else
+            {
+                return null; // Considera manejar mejor los errores aquí
+            }
+        }
+
     }
 }

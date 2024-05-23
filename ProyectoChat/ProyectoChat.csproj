@@ -113,6 +113,7 @@
   <ItemGroup>
     <Compile Include="Clases\BBdd.cs" />
     <Compile Include="Clases\InfoConc.cs" />
+    <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\StockVehiculos.cs" />
     <Compile Include="Formularios\Chat.cs">
       <SubType>Form</SubType>

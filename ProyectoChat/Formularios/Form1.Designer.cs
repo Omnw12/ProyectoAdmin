@@ -68,7 +68,7 @@
             this.metroSetButton1.Text = "Login";
             this.metroSetButton1.ThemeAuthor = "Narwin";
             this.metroSetButton1.ThemeName = "MetroLite";
-            this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
+            this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_ClickAsync);
             // 
             // label1
             // 

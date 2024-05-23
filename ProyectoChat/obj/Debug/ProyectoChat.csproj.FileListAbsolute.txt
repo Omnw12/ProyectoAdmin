@@ -106,3 +106,5 @@ C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\Proy
 C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\ProyectoChat\obj\Debug\Proyecto.ECAB5350.Up2Date
 C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\ProyectoChat\obj\Debug\ProyectoChat.exe
 C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\ProyectoChat\obj\Debug\ProyectoChat.pdb
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Newtonsoft.Json.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Newtonsoft.Json.xml

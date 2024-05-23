@@ -1,10 +1,12 @@
-﻿using ProyectoChat.Clases;
+﻿using Newtonsoft.Json;
+using ProyectoChat.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,21 +72,53 @@ namespace ProyectoChat.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            ActualizarAsync();
         }
 
-        private void Actualizar()
+        private async void ActualizarAsync()
         {
-            BBdd bbdd = new BBdd();
+           
             var user = UserSession.CurrentUser;
-            UserSession.CurrentConc = bbdd.MostrarInfo(user.id_concesionario);
+            UserSession.CurrentConc = await MostrarInfoAsync(user.id_concesionario);
             InfoConc conc = new InfoConc();
             conc.id_concesionario = UserSession.CurrentConc.id_concesionario;
             conc.nombre = metroSetTextBox1.Text;
             conc.direccion = metroSetTextBox2.Text;
             conc.id_provincia = UserSession.CurrentConc.id_provincia;
             conc.telefono = metroSetTextBox4.Text;
-            bbdd.ActualizarInfo(conc);
+            ActualizarInfoAsync(conc);
+        }
+        public async Task<InfoConc> MostrarInfoAsync(int idConcesionario)
+        {
+            var baseUrl = $"http://20.90.95.76/mostrarInfo.php?id_concesionario={idConcesionario}";
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync(baseUrl);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<InfoConc>(jsonResponse);
+                }
+            }
+            return null;
+        }
+
+        public async Task<bool> ActualizarInfoAsync(InfoConc conc)
+        {
+            var baseUrl = "http://20.90.95.76/actualizarInfo.php";
+            using (var client = new HttpClient())
+            {
+                var jsonData = JsonConvert.SerializeObject(conc);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(baseUrl, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<Dictionary<string, bool>>(jsonResponse);
+                    return result["success"];
+                }
+            }
+            return false;
         }
     }
 }
