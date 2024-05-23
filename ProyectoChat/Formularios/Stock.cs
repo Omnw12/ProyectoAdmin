@@ -167,5 +167,10 @@ namespace ProyectoChat
                 MessageBox.Show("Selecciona una fila antes de intentar eliminar.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

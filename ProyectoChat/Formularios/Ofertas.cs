@@ -1,4 +1,5 @@
 ﻿using MetroSet_UI.Controls;
+using Newtonsoft.Json;
 using ProyectoChat.Clases;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,9 +23,10 @@ namespace ProyectoChat
             lblfecha.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
             var user = UserSession.CurrentUser;
-            BBdd bbdd = new BBdd();
-            bbdd.MostrarPeticiones(dataGridView1);
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //BBdd bbdd = new BBdd();
+            //bbdd.MostrarPeticiones(dataGridView1);
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,5 +75,51 @@ namespace ProyectoChat
             BBdd bbdd = new BBdd();
             bbdd.BuscarCoche_id1(dataGridView1, metroSetTextBox1.Text);
         }
+
+        private void Ofertas_Load(object sender, EventArgs e)
+        {
+
+        }
+        private async Task FillDataGridViewAsync()
+        {
+            try
+            {
+                // URL de la API PHP
+                string apiUrl = "http://20.90.95.76/getModels.php";
+
+                // Crear un cliente HTTP
+                using (HttpClient client = new HttpClient())
+                {
+                    // Realizar la solicitud GET a la API y obtener la respuesta
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    // Verificar si la solicitud fue exitosa
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Leer el contenido de la respuesta como una cadena JSON
+                        string jsonContent = await response.Content.ReadAsStringAsync();
+
+                        // Convertir la cadena JSON a una lista de objetos
+                        var dataList = JsonConvert.DeserializeObject<DataGridViewRow[]>(jsonContent);
+
+                        // Rellenar el DataGridView con los datos obtenidos
+                        foreach (var row in dataList)
+                        {
+                            dataGridView1.Rows.Add(row);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al recuperar los datos del servidor.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
     }
 }

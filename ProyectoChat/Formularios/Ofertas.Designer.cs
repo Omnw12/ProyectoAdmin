@@ -221,6 +221,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Ofertas";
             this.Text = "Ofertas";
+            this.Load += new System.EventHandler(this.Ofertas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
