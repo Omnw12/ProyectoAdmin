@@ -55,5 +55,16 @@ namespace ProyectoChat
             Form1 inicio = new Form1();
             inicio.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Confirmar si el usuario realmente desea salir
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cerrar toda la aplicación
+                // o this.Close(); // Cerrar solo el formulario actual
+            }
+        }
     }
 }

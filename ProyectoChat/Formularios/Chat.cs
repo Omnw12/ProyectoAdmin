@@ -6,9 +6,11 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using ProyectoChat.Clases;
 using ProyectoChat.Formularios;
 
@@ -31,13 +33,6 @@ namespace ProyectoChat
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Ofertas inicio = new Ofertas();
-            inicio.Show();
-        }
-       
 
         private void lblfecha_Click(object sender, EventArgs e)
         {
@@ -128,7 +123,72 @@ namespace ProyectoChat
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBox2.Image = new System.Drawing.Bitmap(openFileDialog.FileName);
+                // Cargar y ajustar la imagen al PictureBox
+                var originalImage = new Bitmap(openFileDialog.FileName);
+                pictureBox2.Image = new Bitmap(originalImage, pictureBox2.Size);
+
+                // Guardar la imagen temporalmente
+                string tempPath = Path.Combine(Path.GetTempPath(), "tempImage.png");
+                originalImage.Save(tempPath, System.Drawing.Imaging.ImageFormat.Png);
+
+                // Subir la imagen al servidor y actualizar la base de datos
+                UploadImageAndUpdateDatabase(tempPath);
+            };
+            
+        }
+        private async void UploadImageAndUpdateDatabase(string imagePath)
+        {
+            var user = UserSession.CurrentUser;
+            int id_admin = user.id_admin;  // Obtén el ID del admin de la sesión actual
+
+            var baseUrl = "http://20.90.95.76/actuImagen.php";
+            using (var client = new HttpClient())
+            using (var content = new MultipartFormDataContent())
+            {
+                content.Add(new StringContent(id_admin.ToString()), "id_admin");
+                content.Add(new StreamContent(File.OpenRead(imagePath)), "imagen", "admin_" + id_admin + ".png");
+
+                try
+                {
+                    var response = await client.PostAsync(baseUrl, content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var jsonResponse = await response.Content.ReadAsStringAsync();
+                        var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonResponse);
+
+                        if (result.ContainsKey("success"))
+                        {
+                            MessageBox.Show("La imagen se ha actualizado correctamente.");
+                        }
+                        else if (result.ContainsKey("error"))
+                        {
+                            MessageBox.Show("Error al actualizar la imagen: " + result["error"]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Respuesta inesperada del servidor.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al subir la imagen. Código de estado: " + response.StatusCode);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al conectar con el servidor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Confirmar si el usuario realmente desea salir
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cerrar toda la aplicación
+                // o this.Close(); // Cerrar solo el formulario actual
             }
         }
     }

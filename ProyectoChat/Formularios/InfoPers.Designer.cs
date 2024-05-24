@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -270,11 +271,22 @@
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(907, -1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 45);
+            this.button3.TabIndex = 302;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // InfoPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.metroSetTextBox4);
             this.Controls.Add(this.metroSetTextBox2);
@@ -287,6 +299,7 @@
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.lblhora);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoPers";
             this.Text = "InfoPers";
             this.Load += new System.EventHandler(this.InfoPers_Load);
@@ -311,5 +324,6 @@
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

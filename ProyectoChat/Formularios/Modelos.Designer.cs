@@ -40,6 +40,7 @@
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -198,11 +199,22 @@
             this.metroSetTextBox1.WatermarkText = "";
             this.metroSetTextBox1.Click += new System.EventHandler(this.metroSetTextBox1_Click);
             // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(907, -1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 45);
+            this.button3.TabIndex = 303;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Modelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.metroSetTextBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.metroSetLabel1);
@@ -212,6 +224,7 @@
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.lblhora);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Modelos";
             this.Text = "Modelos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -233,5 +246,6 @@
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
         private System.Windows.Forms.Button btnBuscar;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

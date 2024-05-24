@@ -37,15 +37,14 @@ namespace ProyectoChat
         {
             String username = textBox1.Text.Trim();
             String password = textBox2.Text.Trim();
-            BBdd bbdd = new BBdd();
             var result = await SelectLoginAsync(username, password);
             if (result != null)
             {
                 MessageBox.Show("Sesión iniciada.");
                 UserSession.CurrentUser = result;
+                this.Hide();
                 Chat chat = new Chat();
                 chat.Show();
-                this.Hide();
             }
             else
             {
@@ -90,28 +89,55 @@ namespace ProyectoChat
         public async Task<ClassAdmins> SelectLoginAsync(string username, string password)
         {
             var baseUrl = "http://20.90.95.76/selectLogin.php";
-            if (string.IsNullOrWhiteSpace(baseUrl))
+            using (var client = new HttpClient())
             {
-                throw new ArgumentException("La URL base no puede ser nula o vacía.", nameof(baseUrl));
-            }
+                var response = await client.PostAsync(baseUrl, new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("username", username),
+                    new KeyValuePair<string, string>("password", password)
+                }));
 
-            var client = new HttpClient();
-            var response = await client.PostAsync(baseUrl, new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string, string>("username", username),
-                new KeyValuePair<string, string>("password", password)
-            }));
+                var jsonResponse = await response.Content.ReadAsStringAsync(); // Obtiene la respuesta como string
+                Console.WriteLine("Response: " + jsonResponse); // Imprime la respuesta
 
-            if (response.IsSuccessStatusCode)
-            {
-                var jsonResponse = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<ClassAdmins>(jsonResponse);
-            }
-            else
-            {
-                return null; // Considera manejar mejor los errores aquí
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
+                        if (loginResponse != null && loginResponse.Success)
+                        {
+                            return loginResponse.User;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Login failed: " + loginResponse.Message);
+                            return null;
+                        }
+                    }
+                    catch (JsonException ex)
+                    {
+                        Console.WriteLine("JSON Deserialization Error: " + ex.Message);
+                        return null;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("HTTP Error: " + response.StatusCode + " - " + response.ReasonPhrase);
+                    return null;
+                }
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Confirmar si el usuario realmente desea salir
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cerrar toda la aplicación
+                // o this.Close(); // Cerrar solo el formulario actual
+            }
+        }
     }
 }

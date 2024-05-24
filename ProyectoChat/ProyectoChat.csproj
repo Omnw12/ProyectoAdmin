@@ -111,8 +111,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\BBdd.cs" />
     <Compile Include="Clases\InfoConc.cs" />
+    <Compile Include="Clases\LoginResponse.cs" />
     <Compile Include="Clases\Modelo.cs" />
     <Compile Include="Clases\StockVehiculos.cs" />
     <Compile Include="Formularios\Chat.cs">
@@ -147,12 +147,6 @@
     <Compile Include="Formularios\Modelos.Designer.cs">
       <DependentUpon>Modelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ofertas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Ofertas.Designer.cs">
-      <DependentUpon>Ofertas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Formularios\Stock.cs">
@@ -175,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Modelos.resx">
       <DependentUpon>Modelos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ofertas.resx">
-      <DependentUpon>Ofertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

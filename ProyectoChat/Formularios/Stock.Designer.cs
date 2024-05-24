@@ -54,6 +54,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.metroSetPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,7 +134,7 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(504, 429);
             this.dataGridView1.TabIndex = 286;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // metroSetButton2
             // 
@@ -325,7 +326,7 @@
             this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel5.StyleManager = null;
             this.metroSetLabel5.TabIndex = 308;
-            this.metroSetLabel5.Text = "Id del Coche";
+            this.metroSetLabel5.Text = "Id del Modelo";
             this.metroSetLabel5.ThemeAuthor = "Narwin";
             this.metroSetLabel5.ThemeName = "MetroLite";
             // 
@@ -473,15 +474,26 @@
             this.metroSetLabel6.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel6.StyleManager = null;
             this.metroSetLabel6.TabIndex = 315;
-            this.metroSetLabel6.Text = "Búsqueda por Id del Coche";
+            this.metroSetLabel6.Text = "Búsqueda por Id del Modelo";
             this.metroSetLabel6.ThemeAuthor = "Narwin";
             this.metroSetLabel6.ThemeName = "MetroLite";
+            // 
+            // button5
+            // 
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(907, -1);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(52, 45);
+            this.button5.TabIndex = 316;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.metroSetLabel6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -497,8 +509,13 @@
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Stock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v";
+            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.metroSetPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -533,5 +550,6 @@
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -21,20 +21,7 @@ namespace ProyectoChat.Formularios
             lblhora.Text = DateTime.Now.ToLongTimeString();
             lblfecha.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
-            BBdd bbdd = new BBdd();
-            var user = UserSession.CurrentUser;
-            UserSession.CurrentConc = bbdd.MostrarInfo(user.id_concesionario);
-            if (UserSession.CurrentConc != null && UserSession.CurrentConc.nombre != null)
-            {
-                metroSetTextBox1.Text = UserSession.CurrentConc.nombre;
-                metroSetTextBox2.Text = UserSession.CurrentConc.direccion;
-                metroSetTextBox4.Text = UserSession.CurrentConc.telefono;
-            }
-            else
-            {
-                metroSetTextBox1.Text = "Información no disponible";
-                Console.WriteLine("No se pudo cargar la información del concesionario");
-            }
+            LoadConcesionarioInfo();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -70,23 +57,58 @@ namespace ProyectoChat.Formularios
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            ActualizarAsync();
+            await Actualizar();
+        }
+        private async void LoadConcesionarioInfo()
+        {
+            var user = UserSession.CurrentUser;
+            if (user != null)
+            {
+                var conc = await MostrarInfoAsync(user.id_concesionario);
+                UserSession.CurrentConc = conc;
+                DisplayConcesionarioInfo(conc);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo cargar la información del usuario.");
+            }
         }
 
-        private async void ActualizarAsync()
+        private void DisplayConcesionarioInfo(InfoConc conc)
         {
-           
-            var user = UserSession.CurrentUser;
-            UserSession.CurrentConc = await MostrarInfoAsync(user.id_concesionario);
-            InfoConc conc = new InfoConc();
-            conc.id_concesionario = UserSession.CurrentConc.id_concesionario;
-            conc.nombre = metroSetTextBox1.Text;
-            conc.direccion = metroSetTextBox2.Text;
-            conc.id_provincia = UserSession.CurrentConc.id_provincia;
-            conc.telefono = metroSetTextBox4.Text;
-            ActualizarInfoAsync(conc);
+            if (conc != null && !string.IsNullOrEmpty(conc.nombre))
+            {
+                metroSetTextBox1.Text = conc.nombre;
+                metroSetTextBox2.Text = conc.direccion;
+                metroSetTextBox4.Text = conc.telefono;
+            }
+            else
+            {
+                metroSetTextBox1.Text = "Información no disponible";
+            }
+        }
+        private async Task Actualizar()
+        {
+            var conc = new InfoConc
+            {
+                id_concesionario = UserSession.CurrentConc.id_concesionario,
+                nombre = metroSetTextBox1.Text,
+                direccion = metroSetTextBox2.Text,
+                id_provincia = UserSession.CurrentConc.id_provincia,
+                telefono = metroSetTextBox4.Text
+            };
+
+            bool success = await ActualizarInfoAsync(conc);
+            if (success)
+            {
+                MessageBox.Show("Información actualizada correctamente.");
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la información.");
+            }
         }
         public async Task<InfoConc> MostrarInfoAsync(int idConcesionario)
         {
@@ -119,6 +141,17 @@ namespace ProyectoChat.Formularios
                 }
             }
             return false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Confirmar si el usuario realmente desea salir
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cerrar toda la aplicación
+                // o this.Close(); // Cerrar solo el formulario actual
+            }
         }
     }
 }
