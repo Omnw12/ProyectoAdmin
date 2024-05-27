@@ -107,3 +107,21 @@ C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\Proy
 C:\Users\victormasbol\OneDrive - Centre d'Estudis Monlau\Proj_final_desktop\ProyectoChat\obj\Debug\ProyectoChat.pdb
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Newtonsoft.Json.dll
 E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Newtonsoft.Json.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\obj\Debug\ProyectoChat.csproj.App.config
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Firebase.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\FireSharp.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\LiteDB.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Net.Http.Extensions.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Net.Http.Primitives.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Reactive.dll
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Firebase.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\LiteDB.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Net.Http.Extensions.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Net.Http.Primitives.xml
+E:\M7\UF1-Practica4\ProyectoChat\ProyectoChat\bin\Debug\System.Reactive.xml

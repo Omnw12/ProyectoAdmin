@@ -37,6 +37,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.button3 = new System.Windows.Forms.Button();
+            this.lstChats = new MetroSet_UI.Controls.MetroSetListBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.lstMessages = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +113,7 @@
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalTextColor = System.Drawing.Color.Black;
+            this.metroSetButton1.NormalTextColor = System.Drawing.Color.White;
             this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
@@ -132,11 +136,73 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // lstChats
+            // 
+            this.lstChats.BackColor = System.Drawing.Color.White;
+            this.lstChats.BorderColor = System.Drawing.Color.LightGray;
+            this.lstChats.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.lstChats.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.lstChats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lstChats.HoveredItemBackColor = System.Drawing.Color.LightGray;
+            this.lstChats.HoveredItemColor = System.Drawing.Color.DimGray;
+            this.lstChats.IsDerivedStyle = true;
+            this.lstChats.ItemHeight = 30;
+            this.lstChats.Location = new System.Drawing.Point(28, 99);
+            this.lstChats.MultiSelect = false;
+            this.lstChats.Name = "lstChats";
+            this.lstChats.SelectedIndex = -1;
+            this.lstChats.SelectedItem = null;
+            this.lstChats.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.lstChats.SelectedItemColor = System.Drawing.Color.White;
+            this.lstChats.SelectedText = null;
+            this.lstChats.SelectedValue = null;
+            this.lstChats.ShowBorder = false;
+            this.lstChats.ShowScrollBar = false;
+            this.lstChats.Size = new System.Drawing.Size(101, 391);
+            this.lstChats.Style = MetroSet_UI.Enums.Style.Light;
+            this.lstChats.StyleManager = null;
+            this.lstChats.TabIndex = 305;
+            this.lstChats.ThemeAuthor = "Narwin";
+            this.lstChats.ThemeName = "MetroLite";
+            this.lstChats.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.lstChats_SelectedIndexChanged);
+            // 
+            // btnSend
+            // 
+            this.btnSend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSend.BackgroundImage")));
+            this.btnSend.Location = new System.Drawing.Point(905, 497);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(32, 32);
+            this.btnSend.TabIndex = 307;
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.txtMessage.Location = new System.Drawing.Point(135, 498);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(764, 31);
+            this.txtMessage.TabIndex = 308;
+            // 
+            // lstMessages
+            // 
+            this.lstMessages.HideSelection = false;
+            this.lstMessages.Location = new System.Drawing.Point(162, 99);
+            this.lstMessages.Name = "lstMessages";
+            this.lstMessages.Size = new System.Drawing.Size(775, 391);
+            this.lstMessages.TabIndex = 309;
+            this.lstMessages.UseCompatibleStateImageBehavior = false;
+            // 
             // ChatUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(958, 617);
+            this.Controls.Add(this.lstMessages);
+            this.Controls.Add(this.txtMessage);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.lstChats);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.button1);
@@ -163,5 +229,9 @@
         private System.Windows.Forms.Button button1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private System.Windows.Forms.Button button3;
+        private MetroSet_UI.Controls.MetroSetListBox lstChats;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.ListView lstMessages;
     }
 }
